@@ -1,6 +1,5 @@
 var ajax = new XMLHttpRequest;
 var isNew = false;
-var tasks = [{}];
 
 window.onload = function () {
     document.getElementById("add").onclick = newTask;
@@ -53,4 +52,9 @@ function createTask() {
         status: currstatus
     }
     $("#newitem").empty();
+    display(task);
+}
+
+function display(task) {
+
 }
