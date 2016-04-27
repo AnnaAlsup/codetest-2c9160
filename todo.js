@@ -1,5 +1,6 @@
 var ajax = new XMLHttpRequest;
 var isNew = false;
+var taskNum = 1;
 
 window.onload = function () {
     document.getElementById("add").onclick = newTask;
@@ -56,5 +57,17 @@ function createTask() {
 }
 
 function display(task) {
+    var tr = document.createElement("tr"),
+        num = document.createElement("td"),
+        name = document.createElement("td"),
+        descr = document.createElement("td"),
+        due = document.createElement("td"),
+        comp = document.createElement("td"),
+        del = document.createElement("td");
 
+    num.innerHTML() = tasknum;
+    name.innerHTML() = task.name;
+    descr.innerHTML() = task.description;
+    due.innerHTML() = task.duedate;
+    comp.innerHTML() = task.comp;
 }
